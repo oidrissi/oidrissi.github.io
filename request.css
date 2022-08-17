@@ -34,12 +34,6 @@ textarea::placeholder {
 	text-align: center;
 }
 
-
-
-.resized {
-	height: 4rem;
-}
-
 .flex-container {
     display: flex;
 }
