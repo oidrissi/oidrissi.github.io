@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./style.css">
+	<link rel="stylesheet" href="request.css">
+	<script src="https://kit.fontawesome.com/47ee6ef053.js" crossorigin="anonymous"></script>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<title>Page Exercice</title>
+</head>
+<body>
+	<div class="wrapper">
+		<header>
+			<div class="stick">
+				<nav class="sticky">
+					<a href="/." class="logo"><span class="blue">A.I</span> ArtWork</a>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li class="underligned">
+							<a href="request.html" class="active">Send a request</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<div class="w-full wrapper flex-container">
+			<img class="wrapper flex-child" src="./imgs/CrazyCool.png" alt="">
+			<form action="https://formsubmit.co/111640547412db1da6a39f4824fa6a43" method="POST" class="bg-transparent shadow-md rounded px-8 pt-6 pb-8">
+				<div class="mb-4">
+					<label class="block text-gray-700 text-sm font-bold mt-6" for="name">Name:</label><br>
+					<input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" id="fname" name="fname" placeholder="Your full Name" required><br>
+					<label class="block text-gray-700 text-sm font-bold mt-6" for="email">Email:</label><br>
+					<input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="email" id="email" name="email" placeholder="Email Address"  required>
+					<!-- prompt -->
+					<label class="block text-gray-700 text-sm font-bold mt-6" for="prompt">Description of your drawing:</label><br>
+					<textarea rows ="3" class="resized shadow  border rounded py-2 text-gray-700 focus:outline-none focus:shadow-outline" type="text" maxlength="100" size="4" id="prompt" name="prompt" placeholder="Example: futuristic spaceship flying into a planet, heroes defending, pop style" required></textarea>
+					<button type="submit" class="bg-white smallbtn hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-2 mt-8 border border-blue-500 hover:border-transparent rounded">Send Prompt</button>
+				</div>
+			</form>
+		</div>
+
+		<footer>
+			<div class="links">
+				<ul>
+					<a href="">
+						<li><i class="fa-brands fa-facebook"></i></li>
+					</a>
+					<a href="">
+						<li><i class="fa-brands fa-github"></i></li>
+					</a>
+					<a href="">
+						<li><i class="fa-brands fa-linkedin"></i></li>
+					</a>
+				</ul>
+			</div>
+		</footer>
+	</div>
+	
+</body>
+</html>

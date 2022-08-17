@@ -1,0 +1,63 @@
+/* take whole height */
+/* .wrapper {
+	width: fit-content;
+	block-size: fit-content;
+} */
+
+@media screen and (max-width: 768px) {
+	.flex-container {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.flex-container img {
+		width: 50%;
+		
+	}
+}
+
+form {
+	width: 100%;
+	margin: 2rem auto;
+	align-items: center;
+}
+
+input::placeholder {
+	color: #2967cb;
+	text-align: center;
+	/* content fit */
+	/* object-fit: cover; */
+}
+
+textarea::placeholder {
+	text-align: center;
+}
+
+
+
+.resized {
+	height: 4rem;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.flex-container img {
+	max-height: 600px;
+	height: auto;
+}
+
+.flex-child {
+    flex: 1;
+}  
+
+.smallbtn {
+	width: 30%;
+}
+
+img {
+	width: 100%;
+	margin : 0 auto;
+}

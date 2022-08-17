@@ -1,0 +1,338 @@
+:root {
+	--ff-primary: 'Poppins', sans-serif;
+	--ff-secondary: 'Open Sans', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	list-style: none;
+	text-decoration: none;
+	width: 100%;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	font-family: var(--ff-primary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-weight: 500;
+}
+
+h1 {
+	font-size: 4rem;
+	line-height: 1.2;
+}
+
+h2 {
+	font-size: 2rem;
+	line-height: 1.2;
+}
+
+h3 {
+	font-size: 0.8rem;
+	line-height: 1.2;
+}
+
+span {
+	color: #2967cb;
+}
+
+header {
+	padding: 0;
+	margin: 0;
+}
+
+img {
+	width: 100%;
+	max-height: min(calc(100vh - 100px), 500px);
+    /* height: 100px; */
+    object-fit: cover;
+}
+
+section {
+	width: 100%;
+	margin: 0 auto;
+}
+
+/* .wrapper {
+	width: 100%;
+	margin: 0 auto;
+} */
+
+.flex-imgs {
+	width: 100%;
+}
+
+@media (min-width: 1536px) {
+	.container {
+    width: 100%;
+	margin: 0 auto;
+	}
+}
+
+.container--row {
+	display: flex;
+	align-items: center;
+	text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+	.container--row {
+		/* width: 70%;	 */
+		margin: 0 auto;
+		flex-direction: column;
+	}
+
+	.container--row > div {
+		margin-left: 2rem;
+		margin-right: 2rem;
+	}
+}
+
+.split {
+	width: 50%;
+	margin: 0 auto;
+	min-height: 20rem;
+}
+
+.split h1 {
+	font-size: 4rem;
+	padding-top: 7.3rem;
+}
+
+@media screen and (max-width: 768px) {
+	.split h1{
+		width: 100%;
+		margin: 0 auto;
+		font-size: 2.9rem;
+	}
+}
+
+.second--container {
+	padding-left: 2rem;
+	padding-top: 2.5rem;
+	padding-bottom: 2.5rem;
+}
+
+@media screen and (max-width: 768px) {
+	.second--container {
+		padding-right: 0;
+		padding-left: 0;
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+	}
+}
+
+
+@media screen and (max-width: 768px) {
+	.split {
+		width: 100%;
+		margin: 0 auto;
+	}
+}
+
+.split h3 {
+	font-size: 1.5rem;
+	font-weight: 500;
+	text-decoration: none;
+	/* margin: 4rem auto; */
+}
+
+.split .special--h3 {
+	margin: 2rem auto;
+}
+
+.split .special--h3 button {
+	margin-top: 3rem;
+}
+
+.separated .split h3 {
+	margin-top: 0rem;
+	padding-bottom: 0rem;
+	color:#2967cb;
+}
+
+.nostyle {
+	color: #2967cb;
+}
+
+.nostyle:hover {
+	background: -webkit-linear-gradient(#ffffff, #a336dd);
+  	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+}
+
+.split--special {
+	color: #fff;
+	background-color: rgb(43, 43, 43);
+	border-radius: 0.5rem;
+}
+
+.split--special h2,h3 {
+	font-weight: 500;
+}
+
+.split--special h3 {
+	width: 80%;
+	margin: auto;
+	line-height: 1.3em;
+	font-size: 1.5rem;
+}
+
+.split--special h2 {
+	color: #2967cb;
+	font-size: 3rem;
+	padding-top: 1.5em;
+}
+
+.split p {
+	text-align: center;
+	font-size: 1rem;
+	font-weight: 400;
+	margin: 2rem auto;
+}
+
+@media screen and (max-width: 768px) {
+	.split--special {
+		width: 100%;
+		margin: 0 auto;
+	}
+}
+
+/* Nav */
+nav {
+	width: 100%;
+	margin-top: 2rem;
+	align-items: center;
+	justify-content: space-between;
+}
+
+nav a:hover {
+	color: #2967cb;
+}
+
+.blue {
+	color: #2967cb;
+}
+
+.underligned:hover {
+	background-color: #2967cb;
+	border-color: rgb(0, 0, 0);
+}
+
+.underligned:hover a {
+	color: white;
+}
+
+nav .logo {
+	font-size: 2.5rem;
+}
+
+nav .logo:hover {
+	color:rgb(0, 0, 0);
+}
+
+nav ul {
+	display: flex;
+	width: 80%;
+	margin: 2rem auto;
+}
+
+nav ul li {
+	width: 80%;
+	font-size: 1.3rem;
+	font-weight: 400;
+	line-height: 2rem;
+}
+
+@media(max-width: 768px) {
+	nav ul {
+		display: block;
+	}
+
+	nav ul li {
+		width: 100%;
+		font-size: 1.3rem;
+		font-weight: 400;
+		line-height: 3rem;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.underligned {
+		border: #fff 0 solid;
+		/* width: 50%; */
+		margin: 0 auto;
+	}
+
+	.underligned:hover {
+		background-color: #fff;
+		border-color: #2967cb;
+	}
+
+	.underligned:hover a {
+		color: #2967cb;
+	}
+}
+
+
+/* Footer */
+
+footer {
+	background-color: #2967cb;
+}
+
+footer a {
+	color: white;
+	font-size: 1.3rem;	
+}
+
+.links {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.links ul {
+	width: 40%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.separated {
+	padding: 3rem;
+	min-height: 15rem;
+	background-color: rgb(45, 45, 45);
+	color: white;
+}
+
+.separated .split p {
+	width: 80%;
+}
+
+@media screen and (max-width: 768px) {
+	.separated .split{
+		padding: 0rem;
+	}
+}
+
+.bg--custom {
+	background-color: #2967cb;
+}
