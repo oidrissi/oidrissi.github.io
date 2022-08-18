@@ -60,9 +60,18 @@ header {
 
 img {
 	width: 100%;
-	max-height: min(calc(100vh - 100px), 500px);
+	max-height: min(50rem, 40rem);
     /* height: 100px; */
     object-fit: cover;
+}
+
+.mySlides {
+	animation: fadeIn ease 1s;
+}
+
+@keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
 }
 
 section {
@@ -74,10 +83,6 @@ section {
 	width: 100%;
 	margin: 0 auto;
 } */
-
-.flex-imgs {
-	width: 100%;
-}
 
 @media (min-width: 1536px) {
 	.container {
