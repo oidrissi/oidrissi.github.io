@@ -371,7 +371,7 @@ nav ul li {
 
 	nav .logo {
 		font-size: 1.8rem;
-		position: fixed;
+		position: absolute;
 		right: 3rem;
 	}
 
