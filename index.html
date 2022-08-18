@@ -8,15 +8,19 @@
 
 	<script src="https://kit.fontawesome.com/47ee6ef053.js" crossorigin="anonymous"></script>
 	<script src="https://cdn.tailwindcss.com"></script>
-	<script defer src="carousel.js"></script>
+	<script src="carousel.js" defer></script>
+	<script src="menu.js" defer></script>
 	<title>AI.Artwork - Art made with AI</title>
 </head>
 <body>
 	<div class="wrapper">
 		<header>
-			<nav>
+			<button aria-controls="primary-navigation" aria-expanded="false" class="mobile-nav-toggle">
+				<i class="fas fa-bars "></i>
+			</button>
+			<nav class="flex">
 				<a href="/." class="logo"><span class="blue">A.I</span> ArtWork</a>
-				<ul>
+				<ul id="primary-navigation" data-visible="false" class="primary-navigation">
 					<li><a href="index.html">Home</a></li>
 					<li class="underligned">
 						<a href="request.html">Send a request</a>

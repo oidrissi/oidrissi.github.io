@@ -23,6 +23,7 @@ body {
 	margin: 0 auto;
 	text-align: center;
 	font-family: var(--ff-primary);
+	overflow-x: hidden;
 }
 
 h1,
@@ -214,17 +215,27 @@ section {
 }
 
 /* Nav */
+
 nav {
+	width: 100%;
+	height: 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 2rem;
+}
+
+/* nav {
 	width: 100%;
 	margin-top: 2rem;
 	align-items: center;
 	justify-content: space-between;
-}
+} */
 
 nav a:hover {
 	color: #2967cb;
 }
-
+/*
 .blue {
 	color: #2967cb;
 }
@@ -237,45 +248,121 @@ nav a:hover {
 .underligned:hover a {
 	color: white;
 }
-
+*/
 nav .logo {
 	font-size: 2.5rem;
 }
+
 
 nav .logo:hover {
 	color:rgb(0, 0, 0);
 }
 
-nav ul {
+/* nav ul {
 	display: flex;
 	width: 80%;
 	margin: 2rem auto;
-}
-
+} */
+/*
 nav ul li {
 	width: 80%;
 	font-size: 1.3rem;
 	font-weight: 400;
 	line-height: 2rem;
+} */
+
+.mobile-nav-toggle {
+	display: none;
 }
 
-@media(max-width: 768px) {
+.primary-navigation {
+	list-style: none;
+	padding:0;
+	margin:0;
+	display: flex;
+}
+
+.primary-navigation a {
+	text-decoration: none;
+}
+
+
+@media screen and (max-width: 768px) {
+	nav {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		align-items: left;
+	}
+
+	i {
+		color:#2967cb;
+	}
+
+	button[aria-expanded="true"] > i {
+		color: white;
+	}
+
+	.primary-navigation {
+		width: 100%;
+		transform: translateX(150%);
+		position: fixed;
+		inset: 0 0 0 30%;
+		flex-direction: column;
+		padding-right: 15rem;
+		padding-top: 6rem;
+		background-color: #2967cb;
+	}
+
+	.primary-navigation[data-visible="true"] {
+		transform: translateX(0%);
+	}
+
+	nav .logo {
+		font-size: 1.8rem;
+		position: fixed;
+		right: 7rem;
+	}
+
+	nav a:hover {
+		color: #ffde5c;
+	}
+
+	.mobile-nav-toggle {
+		display: block;
+		z-index: 9999;
+		position: absolute;
+		top: 2.35rem;
+		left: min(32vw, 500px);
+	}
+
 	nav ul {
 		display: block;
 	}
 
-	nav ul li {
-		width: 100%;
-		font-size: 1.3rem;
-		font-weight: 400;
-		line-height: 3rem;
+	nav li {
+		padding: 1rem;
+		padding-right: 7rem;
+		line-height: 2rem;
+		color: white;
+	}
+} 
+
+@media(max-width: 400px)
+{
+	nav li {
+		padding: 1rem;
+		line-height: 2rem;
+		color: white;
 	}
 }
 
+/*
 @media screen and (max-width: 768px) {
 	.underligned {
 		border: #fff 0 solid;
-		/* width: 50%; */
+		width: 50%;
 		margin: 0 auto;
 	}
 
@@ -287,7 +374,7 @@ nav ul li {
 	.underligned:hover a {
 		color: #2967cb;
 	}
-}
+} 
 
 
 /* Footer */

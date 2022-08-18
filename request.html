@@ -8,22 +8,25 @@
 	<link rel="stylesheet" href="request.css">
 	<script src="https://kit.fontawesome.com/47ee6ef053.js" crossorigin="anonymous"></script>
 	<script src="https://cdn.tailwindcss.com"></script>
+	<script src="menu.js" defer></script>
 	<title>Request your drawing</title>
 </head>
 <body>
 	<div class="wrapper">
 		<header>
-			<div class="stick">
-				<nav class="sticky">
-					<a href="/." class="logo"><span class="blue">A.I</span> ArtWork</a>
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li class="underligned">
-							<a href="request.html" class="active">Send a request</a>
-						</li>
-					</ul>
-				</nav>
-			</div>
+			<button aria-controls="primary-navigation" aria-expanded="false" class="mobile-nav-toggle">
+				<i class="fas fa-bars"></i>
+				<!-- closed bars -->
+			</button>
+			<nav class="flex">
+				<a href="/." class="logo"><span class="blue">A.I</span> ArtWork</a>
+				<ul id="primary-navigation" data-visible="false" class="primary-navigation">
+					<li><a href="index.html">Home</a></li>
+					<li class="underligned">
+						<a href="request.html">Send a request</a>
+					</li>
+				</ul>
+			</nav>
 		</header>
 		<div class="w-full wrapper flex-container">
 			<img class="wrapper flex-child" src="./imgs/CrazyCool.png" alt="">
