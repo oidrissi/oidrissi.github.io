@@ -302,7 +302,12 @@ nav ul li {
 		color:#2967cb;
 	}
 
+	button {
+		width: 100%;
+	}
+
 	button[aria-expanded="true"] > i {
+		
 		color: white;
 	}
 
@@ -324,7 +329,7 @@ nav ul li {
 	nav .logo {
 		font-size: 1.8rem;
 		position: fixed;
-		right: 7rem;
+		right: 8rem;
 	}
 
 	nav a:hover {
@@ -334,9 +339,11 @@ nav ul li {
 	.mobile-nav-toggle {
 		display: block;
 		z-index: 9999;
+		
+		width: 30%;
 		position: absolute;
 		top: 2.35rem;
-		left: min(32vw, 500px);
+		right: 0rem;
 	}
 
 	nav ul {
@@ -353,6 +360,12 @@ nav ul li {
 
 @media(max-width: 400px)
 {
+	nav .logo {
+		font-size: 1.8rem;
+		position: fixed;
+		right: 3rem;
+	}
+
 	nav li {
 		padding: 1rem;
 		line-height: 2rem;
