@@ -317,7 +317,7 @@ nav ul li {
 		position: fixed;
 		inset: 0 0 0 30%;
 		flex-direction: column;
-		padding-right: 15rem;
+		padding-right: 8rem;
 		padding-top: 6rem;
 		background-color: #2967cb;
 	}
@@ -343,7 +343,7 @@ nav ul li {
 		width: 30%;
 		position: absolute;
 		top: 2.35rem;
-		right: 0rem;
+		right: 0rem;	
 	}
 
 	nav ul {
@@ -352,7 +352,7 @@ nav ul li {
 
 	nav li {
 		padding: 1rem;
-		padding-right: 7rem;
+		/* padding-right: 7rem; */
 		line-height: 2rem;
 		color: white;
 	}
@@ -360,6 +360,10 @@ nav ul li {
 
 @media(max-width: 400px)
 {
+	.primary-navigation {
+		padding-right: 6rem;
+	}
+
 	nav .logo {
 		font-size: 1.8rem;
 		position: fixed;
