@@ -370,9 +370,11 @@ nav ul li {
 	}
 
 	nav .logo {
+		width: 50%;
+		margin: 0 auto;
 		font-size: 1.8rem;
 		position: absolute;
-		right: 3rem;
+		left: 1rem;
 	}
 
 	nav li {
