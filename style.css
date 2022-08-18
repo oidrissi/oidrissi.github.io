@@ -112,7 +112,6 @@ section {
 
 .split h1 {
 	font-size: 4rem;
-	padding-top: 7.3rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -120,6 +119,9 @@ section {
 		width: 100%;
 		margin: 0 auto;
 		font-size: 2.9rem;
+		padding-top: 7rem;
+		padding-bottom: 7rem;
+
 	}
 }
 
