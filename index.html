@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Omar IDRISSI — Full-Stack Developer</title>
+  <meta name="description" content="I build and ship fast. Web apps, desktop apps, AI integration, automation. Let's work together.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>OI</text></svg>">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ======== NAV ======== -->
+<nav class="nav">
+  <div class="nav-logo">OI</div>
+  <ul class="nav-links">
+    <li><a href="#projects" data-i18n="nav_work">Work</a></li>
+    <li><a href="#services" data-i18n="nav_services">Services</a></li>
+    <li><a href="#testimonials" data-i18n="nav_reviews">Reviews</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div style="display:flex;align-items:center;gap:0;">
+    <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="#contact" class="nav-cta" data-i18n="nav_cta">Hire Me</a>
+    <button class="lang-toggle" id="langToggle" aria-label="Toggle language">FR</button>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">☀</button>
+  </div>
+</nav>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#projects" onclick="closeMobileMenu()" data-i18n="nav_work">Work</a>
+  <a href="#services" onclick="closeMobileMenu()" data-i18n="nav_services">Services</a>
+  <a href="#testimonials" onclick="closeMobileMenu()" data-i18n="nav_reviews">Reviews</a>
+  <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+</div>
+
+<!-- ======== HERO ======== -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-tag" data-i18n="hero_tag">Available for work</div>
+    <h1 class="hero-title" data-i18n-html="hero_title">
+      I build it.<br>
+      I <span class="accent">ship</span> it.
+    </h1>
+    <p class="hero-desc" data-i18n="hero_desc">
+      Full-stack developer specializing in web apps, desktop apps, AI integration, and automation tools. Fast delivery. Clean code. Real results.
+    </p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary" data-i18n="hero_cta">Start a Project</a>
+      <a href="#projects" class="btn-secondary" data-i18n="hero_work">See My Work</a>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-photo-wrapper">
+      <img src="images/me.png" alt="Omar IDRISSI" class="hero-photo">
+    </div>
+    <div class="hero-stats-row">
+      <div class="stat-card" data-index="01">
+        <div class="stat-number">91st</div>
+        <div class="stat-label" data-i18n="stat_codingame">/ 3,000+ — CodinGame 2026</div>
+      </div>
+      <div class="stat-card" data-index="02">
+        <div class="stat-number">20th</div>
+        <div class="stat-label" data-i18n="stat_prev">Top 1% — Previous Competition</div>
+      </div>
+      <div class="stat-card" data-index="03">
+        <div class="stat-number">4.5k+</div>
+        <div class="stat-label" data-i18n="stat_lines">Lines — C++20 AI Engine</div>
+      </div>
+      <div class="stat-card" data-index="04">
+        <div class="stat-number">5★</div>
+        <div class="stat-label" data-i18n="stat_reviews">Client Reviews — Fiverr</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== PROOF BANNER ======== -->
+<div class="proof-banner reveal-stagger">
+  <div class="proof-item">
+    <div class="proof-number">React</div>
+    <div class="proof-label">Frontend</div>
+  </div>
+  <div class="proof-item">
+    <div class="proof-number">Tauri</div>
+    <div class="proof-label" data-i18n="proof_desktop">Desktop Apps</div>
+  </div>
+  <div class="proof-item">
+    <div class="proof-number">C++20</div>
+    <div class="proof-label">Performance</div>
+  </div>
+  <div class="proof-item">
+    <div class="proof-number">Python</div>
+    <div class="proof-label" data-i18n="proof_ai">AI & Automation</div>
+  </div>
+</div>
+
+<!-- ======== ABOUT ======== -->
+<section class="section about-section" id="about">
+  <div class="about-grid reveal">
+    <div>
+      <div class="section-tag" data-i18n="about_tag">About</div>
+      <h2 class="section-title" data-i18n="about_title">Who I am.</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="about-text">
+      <p data-i18n="about_p1">I'm Omar — a 30 yo full-stack developer based in Morocco. I've been writing code since 2016, shipping real projects since 2019. Self-taught through 1337/42 (the peer-to-peer, project-based school — no teachers, no courses, just build).</p>
+      <p data-i18n="about_p2">I work across the stack: React frontends, Tauri desktop apps, Python automation, C++ when performance matters. I've built production e-commerce platforms, business management tools, competition-winning AI engines, and everything in between.</p>
+      <p data-i18n="about_p3">I work async, communicate clearly, and deliver on time. GMT+1 timezone.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ======== PROJECTS ======== -->
+<section class="section" id="projects">
+  <div class="section-header reveal">
+    <div class="section-tag" data-i18n="projects_tag">Selected Work</div>
+    <h2 class="section-title" data-i18n="projects_title">Projects that shipped.</h2>
+    <div class="section-divider"></div>
+  </div>
+
+  <div class="projects-grid reveal-stagger">
+    <!-- Featured: Yazid Negoce -->
+    <a href="https://www.yazidnegoce.com" target="_blank" class="project-card featured" style="text-decoration:none;color:inherit;">
+      <div class="project-video-frame">
+        <img src="images/yazidnegoce.png" alt="Yazid Negoce E-Commerce" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div>
+        <div class="project-num">01</div>
+        <div class="project-result" data-i18n="proj1_status">● Live in Production</div>
+        <div class="project-name">
+          Yazid Negoce
+          <span class="project-arrow">↗</span>
+        </div>
+        <p class="project-desc" data-i18n="proj1_desc">
+          E-commerce platform for an IT products business — laptops, PCs, and accessories. Full design, development, and deployment. Live at yazidnegoce.com.
+        </p>
+        <div class="project-stack">
+          <span class="stack-tag">React</span>
+          <span class="stack-tag">Node.js</span>
+          <span class="stack-tag">E-Commerce</span>
+          <span class="stack-tag">Full Stack</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Mizan -->
+    <div class="project-card featured" onclick="openGallery('mizan')" style="cursor:pointer;">
+      <div class="project-video-frame">
+        <img src="images/mizan-dashboard.png" alt="Mizan App Dashboard" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div>
+        <div class="project-num">02</div>
+        <div class="project-result" data-i18n="proj2_status">● Used Daily</div>
+        <div class="project-name">
+          Mizan App
+          <span class="project-arrow" style="font-size:14px;" data-i18n="proj_view_workflow">▶ View Workflow</span>
+        </div>
+        <p class="project-desc" data-i18n="proj2_desc">
+          Cross-platform desktop app for vending machine business management. Inventory, sales tracking, PDF invoicing, offline-first with sync.
+        </p>
+        <div class="project-stack">
+          <span class="stack-tag">Tauri</span>
+          <span class="stack-tag">React</span>
+          <span class="stack-tag">TypeScript</span>
+          <span class="stack-tag">Supabase</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- AI Engine -->
+    <div class="project-card featured" onclick="openGallery('codingame')" style="cursor:pointer;">
+      <div class="project-video-frame">
+        <img src="images/Report.png" alt="CodinGame Competition Report" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div>
+        <div class="project-num">03</div>
+        <div class="project-result">● Top 3% / 3,000+</div>
+        <div class="project-name">
+          AI Competition Engine
+          <span class="project-arrow" style="font-size:14px;" data-i18n="proj_view_report">▶ View Report</span>
+        </div>
+        <p class="project-desc" data-i18n="proj3_desc">
+          Autonomous agent for real-time multi-agent competition. Beam search, physics simulation, opponent modeling. Zero heap allocations, 50ms deadline.
+        </p>
+        <div class="project-stack">
+          <span class="stack-tag">C++20</span>
+          <span class="stack-tag">Algorithms</span>
+          <span class="stack-tag">AI</span>
+          <span class="stack-tag">Optimization</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- DataMeter Pro -->
+    <div class="project-card featured" onclick="openGallery('datameter')" style="cursor:pointer;">
+      <div class="project-video-frame">
+        <img src="images/DataMeter_dashboard.png" alt="DataMeter Pro Dashboard" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div>
+        <div class="project-num">04</div>
+        <div class="project-result">● Open Source</div>
+        <div class="project-name">
+          DataMeter Pro v3
+          <span class="project-arrow" style="font-size:14px;" data-i18n="proj_view_app">▶ View App</span>
+        </div>
+        <p class="project-desc" data-i18n="proj4_desc">
+          Real-time network monitoring tool for Windows. Per-process bandwidth tracking with smooth animations, desktop overlay, data limits & alerts, SQLite persistence.
+        </p>
+        <div class="project-stack">
+          <span class="stack-tag">Python</span>
+          <span class="stack-tag">CustomTkinter</span>
+          <span class="stack-tag">SQLite</span>
+          <span class="stack-tag">Win32 API</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== SERVICES ======== -->
+<section class="section" id="services" style="background: var(--bg-elevated); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+  <div class="section-header reveal">
+    <div class="section-tag" data-i18n="services_tag">What I Do</div>
+    <h2 class="section-title" data-i18n="services_title">Services</h2>
+    <div class="section-divider"></div>
+  </div>
+
+  <div class="services-grid reveal-stagger">
+    <div class="service-card">
+      <span class="service-icon">◆</span>
+      <div class="service-name" data-i18n="svc1_name">Web Apps</div>
+      <p class="service-desc" data-i18n="svc1_desc">
+        Full-stack web applications. React, TypeScript, Node.js. From landing pages to complex SaaS platforms.
+      </p>
+      <div class="service-price" data-i18n="svc1_price">From $150</div>
+    </div>
+
+    <div class="service-card">
+      <span class="service-icon">▣</span>
+      <div class="service-name" data-i18n="svc2_name">Desktop Apps</div>
+      <p class="service-desc" data-i18n="svc2_desc">
+        Cross-platform desktop applications with Tauri. Native performance, web technologies. Offline-first, sync-ready.
+      </p>
+      <div class="service-price" data-i18n="svc2_price">From $300</div>
+    </div>
+
+    <div class="service-card">
+      <span class="service-icon">⬡</span>
+      <div class="service-name" data-i18n="svc3_name">AI Integration</div>
+      <p class="service-desc" data-i18n="svc3_desc">
+        LLM integration, automation pipelines, intelligent agents. Bring AI into your existing workflows and products.
+      </p>
+      <div class="service-price" data-i18n="svc3_price">From $200</div>
+    </div>
+
+    <div class="service-card">
+      <span class="service-icon">◎</span>
+      <div class="service-name">Automation</div>
+      <p class="service-desc" data-i18n="svc4_desc">
+        Scripts, bots, scrapers, data pipelines. Eliminate repetitive work. Python, Node.js, whatever fits.
+      </p>
+      <div class="service-price" data-i18n="svc4_price">From $100</div>
+    </div>
+
+    <div class="service-card">
+      <span class="service-icon">△</span>
+      <div class="service-name" data-i18n="svc5_name">Video Production</div>
+      <p class="service-desc" data-i18n="svc5_desc">
+        Programmatic video generation with Remotion. Automated content, data-driven visuals, scalable video pipelines.
+      </p>
+      <div class="service-price" data-i18n="svc5_price">From $150</div>
+    </div>
+
+    <div class="service-card">
+      <span class="service-icon">◇</span>
+      <div class="service-name" data-i18n="svc6_name">Performance Eng.</div>
+      <p class="service-desc" data-i18n="svc6_desc">
+        C/C++ optimization, algorithm design, real-time systems. When milliseconds matter.
+      </p>
+      <div class="service-price" data-i18n="svc6_price">From $300</div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== TESTIMONIALS ======== -->
+<section class="section" id="testimonials">
+  <div class="section-header reveal">
+    <div class="section-tag" data-i18n="test_tag">Client Reviews</div>
+    <h2 class="section-title" data-i18n="test_title">What they said.</h2>
+    <div class="section-divider"></div>
+  </div>
+
+  <div class="testimonials-grid reveal-stagger">
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text" data-i18n="test1">"Awesome experience, the best on Fiverr."</p>
+      <div class="testimonial-source">— Fiverr Client</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text" data-i18n="test2">"Great seller, highly skilled and fast learner. I recommend."</p>
+      <div class="testimonial-source">— Fiverr Client</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text" data-i18n="test3">"Great seller, Omar is the best here."</p>
+      <div class="testimonial-source">— Fiverr Client</div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== CTA ======== -->
+<section class="cta-section" id="contact">
+  <h2 class="cta-title reveal" data-i18n-html="cta_title">
+    Got something<br>to <span class="accent">build</span>?
+  </h2>
+  <p class="cta-desc reveal" data-i18n="cta_desc">
+    I work async, deliver fast, and write code that doesn't need babysitting. Let's talk.
+  </p>
+  <div class="cta-links reveal">
+    <a href="https://www.fiverr.com/s/e62xNzj" target="_blank" class="cta-link primary">
+      <span>●</span> <span data-i18n="cta_fiverr">Hire on Fiverr</span>
+    </a>
+    <a href="mailto:oyazami@gmail.com" class="cta-link">
+      ✉ Email
+    </a>
+    <a href="https://github.com/oidrissi" target="_blank" class="cta-link">
+      ◆ GitHub
+    </a>
+  </div>
+</section>
+
+<!-- ======== FOOTER ======== -->
+<footer class="footer">
+  <div class="footer-text">© 2026 Omar IDRISSI</div>
+  <div class="footer-links">
+    <a href="https://www.fiverr.com/s/e62xNzj" target="_blank">Fiverr</a>
+    <a href="https://www.yazidnegoce.com" target="_blank">Yazid Negoce</a>
+    <a href="https://github.com/oidrissi" target="_blank">GitHub</a>
+  </div>
+</footer>
+
+<!-- ======== LIGHTBOX GALLERY ======== -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+  <button class="lightbox-prev" onclick="prevSlide()">‹</button>
+  <button class="lightbox-next" onclick="nextSlide()">›</button>
+  <div class="lightbox-content">
+    <img id="lightboxImg" src="" alt="">
+    <div class="lightbox-caption">
+      <span id="lightboxLabel"></span>
+      <span id="lightboxCounter" class="lightbox-counter"></span>
+    </div>
+  </div>
+</div>
+
+<!-- ======== SCRIPTS ======== -->
+<script>
+  // ---- i18n ----
+  const translations = {
+    en: {
+      nav_work: 'Work',
+      nav_services: 'Services',
+      nav_reviews: 'Reviews',
+      nav_cta: 'Hire Me',
+      hero_tag: 'Available for work',
+      hero_title: 'I build it.<br>I <span class="accent">ship</span> it.',
+      hero_desc: 'Full-stack developer specializing in web apps, desktop apps, AI integration, and automation tools. Fast delivery. Clean code. Real results.',
+      hero_cta: 'Start a Project',
+      hero_work: 'See My Work',
+      stat_codingame: '/ 3,000+ — CodinGame 2026',
+      stat_prev: 'Top 1% — Previous Competition',
+      stat_lines: 'Lines — C++20 AI Engine',
+      stat_reviews: 'Client Reviews — Fiverr',
+      proof_desktop: 'Desktop Apps',
+      proof_ai: 'AI & Automation',
+      about_tag: 'About',
+      about_title: 'Who I am.',
+      about_p1: "I'm Omar — a 30 yo full-stack developer based in Morocco. I've been writing code since 2016, shipping real projects since 2019. Self-taught through 1337/42 (the peer-to-peer, project-based school — no teachers, no courses, just build).",
+      about_p2: "I work across the stack: React frontends, Tauri desktop apps, Python automation, C++ when performance matters. I've built production e-commerce platforms, business management tools, competition-winning AI engines, and everything in between.",
+      about_p3: 'I work async, communicate clearly, and deliver on time. GMT+1 timezone.',
+      projects_tag: 'Selected Work',
+      projects_title: 'Projects that shipped.',
+      proj1_status: '● Live in Production',
+      proj1_desc: 'E-commerce platform for an IT products business — laptops, PCs, and accessories. Full design, development, and deployment. Live at yazidnegoce.com.',
+      proj2_status: '● Used Daily',
+      proj2_desc: 'Cross-platform desktop app for vending machine business management. Inventory, sales tracking, PDF invoicing, offline-first with sync.',
+      proj3_desc: 'Autonomous agent for real-time multi-agent competition. Beam search, physics simulation, opponent modeling. Zero heap allocations, 50ms deadline.',
+      proj4_desc: 'Real-time network monitoring tool for Windows. Per-process bandwidth tracking with smooth animations, desktop overlay, data limits & alerts, SQLite persistence.',
+      proj_view_workflow: '▶ View Workflow',
+      proj_view_report: '▶ View Report',
+      proj_view_app: '▶ View App',
+      services_tag: 'What I Do',
+      services_title: 'Services',
+      svc1_name: 'Web Apps',
+      svc1_desc: 'Full-stack web applications. React, TypeScript, Node.js. From landing pages to complex SaaS platforms.',
+      svc1_price: 'From $150',
+      svc2_name: 'Desktop Apps',
+      svc2_desc: 'Cross-platform desktop applications with Tauri. Native performance, web technologies. Offline-first, sync-ready.',
+      svc2_price: 'From $300',
+      svc3_name: 'AI Integration',
+      svc3_desc: 'LLM integration, automation pipelines, intelligent agents. Bring AI into your existing workflows and products.',
+      svc3_price: 'From $200',
+      svc4_desc: 'Scripts, bots, scrapers, data pipelines. Eliminate repetitive work. Python, Node.js, whatever fits.',
+      svc4_price: 'From $100',
+      svc5_name: 'Video Production',
+      svc5_desc: 'Programmatic video generation with Remotion. Automated content, data-driven visuals, scalable video pipelines.',
+      svc5_price: 'From $150',
+      svc6_name: 'Performance Eng.',
+      svc6_desc: 'C/C++ optimization, algorithm design, real-time systems. When milliseconds matter.',
+      svc6_price: 'From $300',
+      test_tag: 'Client Reviews',
+      test_title: 'What they said.',
+      test1: '"Awesome experience, the best on Fiverr."',
+      test2: '"Great seller, highly skilled and fast learner. I recommend."',
+      test3: '"Great seller, Omar is the best here."',
+      cta_title: 'Got something<br>to <span class="accent">build</span>?',
+      cta_desc: "I work async, deliver fast, and write code that doesn't need babysitting. Let's talk.",
+      cta_fiverr: 'Hire on Fiverr',
+    },
+    fr: {
+      nav_work: 'Projets',
+      nav_services: 'Services',
+      nav_reviews: 'Avis',
+      nav_cta: 'Me Contacter',
+      hero_tag: 'Disponible pour travailler',
+      hero_title: 'Je construis.<br>Je <span class="accent">livre</span>.',
+      hero_desc: "Developpeur full-stack : applications web, desktop, integration IA et outils d'automatisation. Livraison rapide. Code propre. Resultats concrets.",
+      hero_cta: 'Lancer un Projet',
+      hero_work: 'Voir mes Projets',
+      stat_codingame: '/ 3 000+ — CodinGame 2026',
+      stat_prev: 'Top 1% — Competition precedente',
+      stat_lines: 'Lignes — Moteur IA C++20',
+      stat_reviews: 'Avis Clients — Fiverr',
+      proof_desktop: 'Apps Desktop',
+      proof_ai: 'IA & Automatisation',
+      about_tag: 'A propos',
+      about_title: 'Qui je suis.',
+      about_p1: "Je suis Omar — developpeur full-stack de 30 ans base au Maroc. J'ecris du code depuis 2016, je livre des projets reels depuis 2019. Forme a 1337/42 (l'ecole peer-to-peer, basee sur les projets — pas de profs, pas de cours, juste construire).",
+      about_p2: "Je travaille sur toute la stack : frontends React, apps desktop Tauri, automatisation Python, C++ quand la performance compte. J'ai construit des plateformes e-commerce en production, des outils de gestion, des moteurs IA primies en competition, et bien plus.",
+      about_p3: 'Je travaille en asynchrone, je communique clairement, et je livre dans les delais. Fuseau horaire GMT+1.',
+      projects_tag: 'Travaux selectionnes',
+      projects_title: 'Projets livres.',
+      proj1_status: '● En Production',
+      proj1_desc: "Plateforme e-commerce pour une entreprise de produits IT — ordinateurs portables, PC et accessoires. Conception, developpement et deploiement complets. En ligne sur yazidnegoce.com.",
+      proj2_status: '● Utilise quotidiennement',
+      proj2_desc: "Application desktop multi-plateforme pour la gestion d'un commerce de distributeurs automatiques. Inventaire, suivi des ventes, facturation PDF, offline-first avec synchronisation.",
+      proj3_desc: "Agent autonome pour une competition multi-agents en temps reel. Recherche par faisceau, simulation physique, modelisation d'adversaires. Zero allocations heap, contrainte de 50ms.",
+      proj4_desc: "Outil de surveillance reseau en temps reel pour Windows. Suivi de bande passante par processus, animations fluides, overlay desktop, limites de donnees et alertes, persistance SQLite.",
+      proj_view_workflow: '▶ Voir le workflow',
+      proj_view_report: '▶ Voir le rapport',
+      proj_view_app: "▶ Voir l'app",
+      services_tag: 'Ce que je fais',
+      services_title: 'Services',
+      svc1_name: 'Apps Web',
+      svc1_desc: 'Applications web full-stack. React, TypeScript, Node.js. Des landing pages aux plateformes SaaS complexes.',
+      svc1_price: 'A partir de 150$',
+      svc2_name: 'Apps Desktop',
+      svc2_desc: 'Applications desktop multi-plateformes avec Tauri. Performance native, technologies web. Offline-first, pret pour la synchro.',
+      svc2_price: 'A partir de 300$',
+      svc3_name: 'Integration IA',
+      svc3_desc: "Integration de LLM, pipelines d'automatisation, agents intelligents. Integrez l'IA dans vos workflows et produits existants.",
+      svc3_price: 'A partir de 200$',
+      svc4_desc: "Scripts, bots, scrapers, pipelines de donnees. Eliminez le travail repetitif. Python, Node.js, ce qu'il faut.",
+      svc4_price: 'A partir de 100$',
+      svc5_name: 'Production Video',
+      svc5_desc: "Generation video programmatique avec Remotion. Contenu automatise, visuels pilotes par les donnees, pipelines video a l'echelle.",
+      svc5_price: 'A partir de 150$',
+      svc6_name: 'Ing. Performance',
+      svc6_desc: "Optimisation C/C++, conception d'algorithmes, systemes temps reel. Quand chaque milliseconde compte.",
+      svc6_price: 'A partir de 300$',
+      test_tag: 'Avis Clients',
+      test_title: 'Ce qu\'ils ont dit.',
+      test1: '"Experience incroyable, le meilleur sur Fiverr."',
+      test2: '"Excellent vendeur, tres competent et apprend vite. Je recommande."',
+      test3: '"Excellent vendeur, Omar est le meilleur ici."',
+      cta_title: 'Un projet<br>a <span class="accent">construire</span> ?',
+      cta_desc: 'Je travaille en asynchrone, je livre vite, et j\'ecris du code qui tourne tout seul. Parlons-en.',
+      cta_fiverr: 'Engager sur Fiverr',
+    }
+  };
+
+  let currentLang = localStorage.getItem('lang') || 'en';
+
+  function setLang(lang) {
+    currentLang = lang;
+    localStorage.setItem('lang', lang);
+    document.documentElement.lang = lang;
+    document.getElementById('langToggle').textContent = lang === 'en' ? 'FR' : 'EN';
+    const t = translations[lang];
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (t[key] !== undefined) el.textContent = t[key];
+    });
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+      const key = el.getAttribute('data-i18n-html');
+      if (t[key] !== undefined) el.innerHTML = t[key];
+    });
+  }
+
+  // Init language
+  if (currentLang !== 'en') setLang(currentLang);
+  else document.getElementById('langToggle').textContent = 'FR';
+
+  document.getElementById('langToggle').addEventListener('click', () => {
+    setLang(currentLang === 'en' ? 'fr' : 'en');
+  });
+
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => observer.observe(el));
+
+  // Theme toggle
+  const toggle = document.getElementById('themeToggle');
+  const root = document.documentElement;
+  const saved = localStorage.getItem('theme');
+  if (saved) {
+    root.setAttribute('data-theme', saved);
+    toggle.textContent = saved === 'light' ? '☾' : '☀';
+  }
+  toggle.addEventListener('click', () => {
+    const current = root.getAttribute('data-theme');
+    const next = current === 'light' ? 'dark' : 'light';
+    root.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    toggle.textContent = next === 'light' ? '☾' : '☀';
+  });
+
+  // Mobile menu
+  const hamburger = document.getElementById('navHamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
+  });
+  function closeMobileMenu() {
+    hamburger.classList.remove('active');
+    mobileMenu.classList.remove('active');
+  }
+
+  // Lightbox gallery
+  const galleries = {
+    mizan: [
+      { src: 'images/mizan-dashboard.png', label: 'Dashboard — KPIs, stock alerts, quick actions' },
+      { src: 'images/mizan-products.png', label: 'Products — Inventory management with CSV import/export' },
+      { src: 'images/mizan-categories.png', label: 'Categories — Product and expense categorization' },
+      { src: 'images/mizan-entrepots.png', label: 'Warehouses — Multi-location stock management' },
+      { src: 'images/mizan-tarifs.png', label: 'Pricing Grids — Custom pricing per client segment' },
+    ],
+    codingame: [
+      { src: 'images/Report.png', label: 'CodinGame Winter Challenge 2026 — Rank 91 / 2,382' },
+    ],
+    datameter: [
+      { src: 'images/DataMeter_dashboard.png', label: 'Dashboard — Real-time DL/UL speeds, daily usage progress, data limit' },
+      { src: 'images/DataMeter_processes.png', label: 'Process Hierarchy — Per-app bandwidth tracking with auto-sorting' },
+    ],
+  };
+
+  let currentGallery = [];
+  let currentIndex = 0;
+
+  function openGallery(key) {
+    currentGallery = galleries[key];
+    currentIndex = 0;
+    showSlide();
+    document.getElementById('lightbox').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  function showSlide() {
+    const item = currentGallery[currentIndex];
+    document.getElementById('lightboxImg').src = item.src;
+    document.getElementById('lightboxLabel').textContent = item.label;
+    document.getElementById('lightboxCounter').textContent =
+      currentGallery.length > 1 ? (currentIndex + 1) + ' / ' + currentGallery.length : '';
+    document.querySelector('.lightbox-prev').style.display = currentGallery.length > 1 ? '' : 'none';
+    document.querySelector('.lightbox-next').style.display = currentGallery.length > 1 ? '' : 'none';
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % currentGallery.length;
+    showSlide();
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
+    showSlide();
+  }
+
+  document.getElementById('lightbox').addEventListener('click', (e) => {
+    if (e.target === e.currentTarget) closeLightbox();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (!document.getElementById('lightbox').classList.contains('active')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowRight') nextSlide();
+    if (e.key === 'ArrowLeft') prevSlide();
+  });
+</script>
+
+</body>
+</html>
